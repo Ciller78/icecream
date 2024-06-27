@@ -1,0 +1,128 @@
+::before ::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-neutral-900: hsl(207, 19%, 9%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-accent-400: hsl(142, 90%, 61%);
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  line-height: 1.6;
+  /* background: var(--clr-neutral-900); */
+  background-color: grey;
+  font-family: sans-serif;
+}
+
+.card {
+  color: var(--clr-neutral-100);
+  background-image: url(./images/Ice-cream.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10rem 0 0;
+  max-width: 35ch;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 1.5em;
+  background: linear-gradient(
+    hsl(0 0% 0%/0),
+    hsl(20 0% 0%/ 0.3) 20%,
+    hsl(0 0% 0%/1)
+  );
+  --padding: 0.5rem;
+  padding: var(--padding);
+}
+
+.card-title {
+  position: relative;
+  max-width: 100%;
+}
+
+.card-title::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: var(--clr-accent-400);
+  width: 100%;
+  left: calc(var(--padding) * -1);
+  bottom: 0;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-accent-400);
+  padding: 0.5em 1.5em;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--clr-neutral-100);
+}
+
+.test {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  background-image: linear-gradient(#000, #fff);
+  outline-style: 10px purple;
+}
+
+.test:hover {
+  background-image: linear-gradient(to bottom, #fff, #000);
+  color: red;
+  border-radius: 50% 10px 20px 20%;
+
+  cursor: crosshair;
+}
+
+.card-mainbg {
+  background-color: #000;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  place-content: center;
+  margin: 50px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-bg {
+  background-color: #333;
+  width: 150px;
+  height: 100px;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+section img {
+  width: 100px;
+  height: 100px;
+}
+
+.main-h1 {
+  display: grid;
+  place-content: center;
+  padding: 10px 0;
+  color: whitesmoke;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.card-bg button {
+  background-color: green;
+}
